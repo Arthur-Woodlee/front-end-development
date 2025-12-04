@@ -1,0 +1,20 @@
+@use 'sass:meta';
+@use 'sass:math';
+
+@function strip-unit($value) {
+  @if meta.type-of($value) == 'number' and math.unit($value) != '' {
+    @return math.div($value, ($value * 0 + 1));
+  }
+
+  @return $value;
+}
+
+// Modular scale (e.g., base size * ratio ^ step)
+@function modular-scale($step, $base: 1rem, $ratio: 1.25) {
+  @return strip-unit($base) * pow($ratio, $step) * 1rem;
+}
+
+// Spacing ratio (e.g., base spacing * multiplier)
+@function spacing($multiplier, $base: 1rem) {
+  @return strip-unit($base) * $multiplier * 1rem;
+}

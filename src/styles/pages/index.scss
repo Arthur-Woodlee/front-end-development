@@ -1,3 +1,8 @@
+@use '../global/_functions' as funcions;
+@use '../global/_media' as media;
+@use '../global/_typography' as typography;
+@use '../global/_variables' as variables; 
+
 $primary-color: #3498db;
 
 h1 {
