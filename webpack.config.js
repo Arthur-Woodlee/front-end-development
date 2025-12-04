@@ -29,7 +29,7 @@ module.exports = {
     clean: true, // Clears the output directory before each build to remove outdated files.
   },
   module: {
-    rules: [ // At the ver least this enable webpack to understand import '../styles/pages/index.scss'; in some .js file, and compiles the scss into css.
+    rules: [ // At the ver least this enables webpack to understand import '../styles/pages/index.scss'; in some .js file, and compiles the scss into css.
       {
         test: /\.scss$/, // matches .scss files
         use: [
