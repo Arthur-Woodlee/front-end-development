@@ -4,6 +4,7 @@
 @use "_functions" as functions;
 
 .header {
+  
   @include layout.grid;
   background-color: variables.$color-theme-background;
   color: variables.$color-theme;
