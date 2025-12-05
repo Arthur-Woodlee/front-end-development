@@ -1,0 +1,22 @@
+@use "_layout" as layout;
+@use "_media" as media;
+@use "_variables" as variables;
+@use "_functions" as functions;
+
+.header {
+  @include layout.grid;
+  background-color: variables.$color-theme-background;
+  color: variables.$color-theme;
+
+  &__nav-item--none::marker {
+    content: variables.$list-style-none;
+  }
+
+  @include media.respond-to(md) {
+    @include layout.grid(
+      2,
+      functions.spacing(variables.$spacing-size-md),
+      functions.spacing(variables.$spacing-size-md)
+    );
+  }
+}

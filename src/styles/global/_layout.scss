@@ -1,0 +1,13 @@
+@use '_functions' as functions;
+@use '_variables' as variables;
+
+@mixin grid(
+  $columns: 1,
+  $gap: functions.spacing(variables.$spacing-size-sm),
+  $margin-block: functions.spacing(variables.$spacing-size-sm)
+) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  gap: $gap;
+  margin-block: $margin-block;
+}
