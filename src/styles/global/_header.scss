@@ -26,13 +26,13 @@
     background: url("../../assets/earth.jpeg") repeat-x;
     background-size: cover;
     animation: spin 100s linear infinite;
-    box-shadow: 0px 35px 10px -12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 35px 10px -12px rgb(0, 0, 0);
     margin-block: functions.spacing(variables.$spacing-size-md);
   }
 
   &__title {
     text-align: center;
-    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    text-shadow: 0 4px 6px rgb(0, 0, 0);
   }
 
   &__nav-item--none::marker {
@@ -53,7 +53,7 @@
     line-height: 0;
     border-radius: 20%;
     border-style: none;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 6px rgb(0, 0, 0);
   }
 
   @include media.respond-to(md) {
@@ -62,10 +62,6 @@
       functions.spacing(variables.$spacing-size-md),
       functions.spacing(variables.$spacing-size-md)
     );
-
-    grid-column-gap: 0;
-
-    grid-row-gap: 0;
 
     &__title {
       justify-self: start;
