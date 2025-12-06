@@ -4,17 +4,17 @@
 
 h1 {
   font-size: functions.modular-scale(variables.$font-size-lg);
-  margin-bottom: functions.spacing(variables.$spacing-size-lg);
+  margin-bottom: functions.spacing(variables.$spacing-size-md);
   font-weight: 700;
 
   @include media.respond-to(md) {
     font-size: functions.modular-scale(variables.$font-size-xl);
-    margin-bottom: functions.spacing(variables.$spacing-size-xl);
+    margin-bottom: functions.spacing(variables.$spacing-size-lg);
   }
 
   @include media.respond-to(lg) {
     font-size: functions.modular-scale(variables.$font-size-xxl);
-    margin-bottom: functions.spacing(variables.$spacing-size-xxl);
+    margin-bottom: functions.spacing(variables.$spacing-size-xl);
   }
 }
 

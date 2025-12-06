@@ -3,14 +3,57 @@
 @use "_variables" as variables;
 @use "_functions" as functions;
 
+@keyframes spin {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -500px 0;
+  }
+}
+
 .header {
   @include layout.grid;
-  
+  place-items: center;
+
   background-color: variables.$color-theme-background;
   color: variables.$color-theme;
 
+  &__icon--earth {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: url("../../assets/earth.jpeg") repeat-x;
+    background-size: cover;
+    animation: spin 100s linear infinite;
+    box-shadow: 0px 35px 10px -12px rgba(0, 0, 0, 0.2);
+    margin-block: functions.spacing(variables.$spacing-size-md);
+  }
+
+  &__title {
+    text-align: center;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+
   &__nav-item--none::marker {
     content: variables.$list-style-none;
+  }
+
+  &__nav-items {
+    display: none;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+
+  &__nav {
+    margin-block: functions.spacing(variables.$spacing-size-md);
+  }
+
+  &__menu-toggle {
+    padding: 2px;
+    line-height: 0;
+    border-radius: 20%;
+    border-style: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   }
 
   @include media.respond-to(md) {
@@ -19,5 +62,30 @@
       functions.spacing(variables.$spacing-size-md),
       functions.spacing(variables.$spacing-size-md)
     );
+    grid-column-gap: 0px; /* horizontal spacing */
+    grid-row-gap: 0px; /* vertical spacing */
+    &__title {
+      justify-self: start;
+      text-align: left;
+    }
+    &__nav {
+      grid-column: 2;
+      justify-self: start;
+      margin-top: 0;
+    }
+    &__menu-toggle {
+      display: none;
+    }
+    &__nav-items {
+      display: flex;
+      padding: 0;
+      width: 100%;
+      justify-content: start;
+      column-gap: functions.spacing(variables.$spacing-size-md);
+    }
+    &__icon--earth {
+      grid-column: 1;
+      grid-row: 1 / 3;
+    }
   }
 }
