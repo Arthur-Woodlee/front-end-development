@@ -7,7 +7,7 @@
   from {
     background-position: 0 0;
   }
-  
+
   to {
     background-position: -500px 0;
   }
@@ -17,9 +17,7 @@
   @include layout.grid;
 
   place-items: center;
-
   background-color: variables.$color-theme-background;
-
   color: variables.$color-theme;
 
   &__icon--earth {
@@ -29,7 +27,7 @@
     background: url("../../assets/earth.jpeg") repeat-x;
     background-size: cover;
     animation: spin 100s linear infinite;
-    box-shadow: 0px 35px 10px -12px rgb(0 0 0 / 20%);
+    box-shadow: 0 35px 10px -12px rgb(0 0 0 / 20%);
     margin-block: functions.spacing(variables.$spacing-size-md);
   }
 
