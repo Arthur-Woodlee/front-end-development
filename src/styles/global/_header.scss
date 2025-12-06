@@ -41,7 +41,7 @@
 
   &__nav-items {
     display: none;
-    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    text-shadow: 0 4px 6px rgb(0, 0, 0);
   }
 
   &__nav {
@@ -62,20 +62,26 @@
       functions.spacing(variables.$spacing-size-md),
       functions.spacing(variables.$spacing-size-md)
     );
-    grid-column-gap: 0px; /* horizontal spacing */
-    grid-row-gap: 0px; /* vertical spacing */
+
+    grid-column-gap: 0;
+
+    grid-row-gap: 0;
+
     &__title {
       justify-self: start;
       text-align: left;
     }
+
     &__nav {
       grid-column: 2;
       justify-self: start;
       margin-top: 0;
     }
+
     &__menu-toggle {
       display: none;
     }
+
     &__nav-items {
       display: flex;
       padding: 0;
@@ -83,6 +89,7 @@
       justify-content: start;
       column-gap: functions.spacing(variables.$spacing-size-md);
     }
+
     &__icon--earth {
       grid-column: 1;
       grid-row: 1 / 3;
