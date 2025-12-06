@@ -7,6 +7,7 @@
   from {
     background-position: 0 0;
   }
+  
   to {
     background-position: -500px 0;
   }
@@ -14,9 +15,11 @@
 
 .header {
   @include layout.grid;
+
   place-items: center;
 
   background-color: variables.$color-theme-background;
+
   color: variables.$color-theme;
 
   &__icon--earth {
@@ -26,13 +29,13 @@
     background: url("../../assets/earth.jpeg") repeat-x;
     background-size: cover;
     animation: spin 100s linear infinite;
-    box-shadow: 0px 35px 10px -12px rgb(0 0 0 / 0.2);
+    box-shadow: 0px 35px 10px -12px rgb(0 0 0 / 20%);
     margin-block: functions.spacing(variables.$spacing-size-md);
   }
 
   &__title {
     text-align: center;
-    text-shadow: 0 4px 6px rgb(0 0 0 / 0.2);
+    text-shadow: 0 4px 6px rgb(0 0 0 / 20%);
   }
 
   &__nav-item--none::marker {
@@ -41,7 +44,7 @@
 
   &__nav-items {
     display: none;
-    text-shadow: 0 4px 6px rgb(0 0 0 / 0.2);
+    text-shadow: 0 4px 6px rgb(0 0 0 / 20%);
   }
 
   &__nav {
@@ -53,7 +56,7 @@
     line-height: 0;
     border-radius: 20%;
     border-style: none;
-    box-shadow: 0 4px 6px rgb(0 0 0 / 0.2);
+    box-shadow: 0 4px 6px rgb(0 0 0 / 20%);
   }
 
   @include media.respond-to(md) {
