@@ -1,5 +1,6 @@
-@use '_functions' as functions;
-@use '_variables' as variables;
+@use "_functions" as functions;
+@use "_variables" as variables;
+@use "sass:math";
 
 @mixin grid(
   $columns: 1,
